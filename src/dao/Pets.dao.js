@@ -12,6 +12,14 @@ class PetsDao {
     async save(pet) {
         return await petModel.create(pet);
     }
+    
+     async getPetById(id) {
+        return await petModel.findById(id);
+    }
+
+    async updatePet(id, pet) {
+        return await petModel.findByIdAndUpdate(id, pet, { new: true });
+    }
 }
 
 module.exports = new PetsDao();

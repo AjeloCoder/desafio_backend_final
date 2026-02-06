@@ -15,6 +15,14 @@ class UsersDao {
     async save(user) {
         return await userModel.create(user);
     }
+
+    async getUserById(id) {
+        return await userModel.findById(id);
+    }
+    
+    async updateUser(id, user) {
+        return await userModel.findByIdAndUpdate(id, user, { new: true });
+    }
 }
 
 module.exports = new UsersDao();
