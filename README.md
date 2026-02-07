@@ -15,6 +15,11 @@ Ejecutar el contenedor:Para evitar conflictos de puertos locales (como el error 
 Nota: El uso de --env-file .env es obligatorio para inyectar la URL de MongoDB al contenedor.🧪 Pruebas Automatizadas (Testing)Hemos implementado tests de integración para asegurar que los controladores de usuarios y mascotas funcionen correctamente.Ejecutar todos los tests:Bashnpm test
 Los tests verifican:Conectividad de los endpoints principales.Correcta creación de recursos en la base de datos.Validaciones de seguridad y manejo de errores (ej: 404 Not Found o 400 Bad Request).
 
-📁 Estructura del Proyectosrc/app.js: Punto de entrada de la aplicación.src/routes/: Definición de todos los endpoints (ej: users.router.js).src/controllers/: Lógica de negocio (ej: users.controller.js).src/config/: Configuración de base de datos y variables globales.test/: Suite de pruebas con Mocha, Chai y Supertest.
+📁 Estructura del Proyecto
+src/app.js: Punto de entrada de la aplicación.
+src/routes/: Definición de todos los endpoints (ej: users.router.js).
+src/controllers/: Lógica de negocio (ej: users.controller.js).
+src/config/: Configuración de base de datos y variables globales.
+test/: Suite de pruebas con Mocha, Chai y Supertest.
 
 👤 AutorAlejo Bermúdez - GitHub Profile
