@@ -10,8 +10,7 @@ const swaggerOptions = {
             version: '1.0.0'
         }
     },
-    // Indicamos dónde están los archivos que tienen la documentación (comentarios)
-    // Usamos path.resolve para evitar problemas de rutas en Windows/Docker
+    
     apis: [`${path.join(__dirname, '../routes/*.js')}`] 
 };
 

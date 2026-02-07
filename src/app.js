@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const DB = require('./config/db');
 const mocksRouter = require('./routes/mocks.router'); 
 const usersRouter = require('./routes/users.router');
-const adoptionsRouter = require('./routes/adoptions.router'); // <--- Importar
+const adoptionsRouter = require('./routes/adoptions.router'); 
 const petsRouter = require('./routes/pets.router'); 
 
 const swaggerUi = require('swagger-ui-express');

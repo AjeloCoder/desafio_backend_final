@@ -1,22 +1,21 @@
 const { faker } = require('@faker-js/faker');
 const { createHash } = require('./hash');
 
-// Generador de Usuarios
+
 const generateUser = () => {
-    // Generamos un rol aleatorio (50% probabilidad)
     const role = Math.random() > 0.5 ? 'admin' : 'user';
 
     return {
         first_name: faker.person.firstName(),
         last_name: faker.person.lastName(),
         email: faker.internet.email(),
-        password: createHash('coder123'), // Requisito: Encriptada y siempre la misma
+        password: createHash('coder123'), 
         role: role,
-        pets: [] // Requisito: Array vacío
+        pets: [] 
     };
 };
 
-// Generador de Mascotas
+
 const generatePet = () => {
     const specie = Math.random() > 0.5 ? 'dog' : 'cat';
     
@@ -25,7 +24,7 @@ const generatePet = () => {
         specie: specie,
         birthDate: faker.date.past(),
         adopted: false,
-        image: faker.image.urlLoremFlickr({ category: 'animals' }) // Imagen random opcional
+        image: faker.image.urlLoremFlickr({ category: 'animals' })
     };
 };
 

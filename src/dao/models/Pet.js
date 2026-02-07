@@ -7,8 +7,8 @@ const schema = new mongoose.Schema({
     specie:    { type: String, required: true },
     birthDate: { type: Date },
     adopted:   { type: Boolean, default: false },
-    owner:     { type: mongoose.Schema.Types.ObjectId, ref: 'users' }, // Dueño (si es adoptado)
-    image:     { type: String } // Opcional para el futuro
+    owner:     { type: mongoose.Schema.Types.ObjectId, ref: 'users' },
+    image:     { type: String } 
 });
 
 const petModel = mongoose.model(collection, schema);
